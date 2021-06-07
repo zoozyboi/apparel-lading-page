@@ -3,7 +3,7 @@ var angle = 0
 var changeBackground = function(){
   angle = angle + 1
   
-  document.body.style.backgroundImage = "linear-gradient("+ angle +"deg ,hsl(0, 42%, 90%), hsl(0, 100%, 98%))"
+  document.body.style.backgroundImage = "linear-gradient("+ angle +"deg ,hsl(0, 42%, 90%), hsl(0, 100%, 98%), rgb(254,198,193))"
   console.log('rotate color');
   requestAnimationFrame(changeBackground)
 }
