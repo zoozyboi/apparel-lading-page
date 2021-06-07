@@ -1,0 +1,208 @@
+:root{
+    --primary-red: hsl(0, 36%, 70%);
+    --primary-sred: hsl(0, 93%, 68%);
+    
+    --neutral-dkred: hsl(0, 6%, 24%);
+    --gradient-1: hsl(0, 0%, 100%);
+    --gradient-2: hsl(0, 42%, 90%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+*,*::before,*::after {
+    box-sizing: inherit;
+}
+body{
+    width:100vw;
+    height:100vh;
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--primary-red);   
+}
+h1, h2, h3 {
+    text-rendering: optimizeLegibility;
+  }
+.main {
+
+}
+.logo {
+    padding: 30px;
+    display: block;
+}
+.logo img {
+    width: 120px;
+    height: 25px;
+}
+.logoWeb{
+    display: none;
+}
+.hero {
+    background: url('./images/hero-mobile.jpg');
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title {
+    text-align: center;
+    margin: 10px 53px;
+}
+h1{font-size: 40px;text-transform: uppercase;}
+#first{font-weight: 300;color: var(--primary-red);}
+#second{font-weight: 400;color: black;}
+p{
+    margin: 10px 30px;
+    margin-bottom: 50px;
+    font-size: 14px;
+    text-align: center;
+}
+.email-form {
+    position:relative;
+}
+.placetogether {
+    display: flex;
+    justify-content: space-between;
+}
+.email {
+    width: 270px;
+    height: 35px;
+    border: 1px solid var(--neutral-dkred);
+    border-radius: 20px;
+    padding-left: 20px;
+    opacity: .4;
+}
+#demo2 {
+    position: absolute;
+    right:65px;
+    transition: display 5s ease-in-out;
+}
+.submit {
+    position: absolute;
+    left: 50%;
+    transform: translateX(140%);
+    background-color: rgb(241,155,154);
+    border: none;
+    border-radius: 30px;
+    width: 60px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 300ms ease-in-out;
+    cursor: pointer;
+    
+}
+button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+.submit a:hover, a:active,a:focus {
+   background-color: rgb(238,188,188);
+   
+}
+.submit button:hover, button:active, button:focus {
+    background-color: rgb(238,188,188);
+}
+@media (min-width:768px){
+    .hero{
+        background: url('./images/hero-desktop.jpg');
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+        background-position: 1px -123px;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (min-width:1000px) {
+    body{
+        overflow-x: hidden;
+    }
+    .main {
+        display: flex;
+        flex-direction: row-reverse;
+        
+    }
+    .logo {
+        display: none;
+    }
+    .logoWeb{
+        display: block;
+        padding: 50px 100px;
+    }
+    .hero {
+        background: url('./images/hero-desktop.jpg');
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-position: 1px 0px;
+        background-repeat: no-repeat;
+    }
+    .body{
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start; 
+        /* margin-left: auto; */
+    }
+    .title {
+        padding: 50px 100px;
+        padding-left: 0;
+        margin-left: 100px;
+        margin-right: 13px;
+        padding-bottom: 0;
+    }
+    h1{
+        font-size: 58px;
+        -webkit-line-clamp: 3;
+        text-align: left;
+        margin-bottom: 0;
+    }
+    #p1 {
+        font-size: 16px;
+        margin-left: 100px;
+        margin-right: 50px;
+        -webkit-line-clamp: 3;
+        text-align: left;
+    }
+    .placetogether {
+        position: absolute;
+        left: 50%;
+        transform: translateX(37%);
+    }
+    .email {
+        width: 320px;
+        height: 50px;
+    }
+    .submit{
+        width: 80px;
+        height: 50px;
+    }
+    #demo2{
+        right: 88px;
+    }
+    #demo {
+        margin-top: 67px;
+        margin-left: 140px;
+        color:red;
+    }
+    
+}
+@media(min-width:1920px){
+    #p1 {
+        font-size: 20px;
+        margin-right: 500px;
+    }
+}
